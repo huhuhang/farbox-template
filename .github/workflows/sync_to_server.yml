@@ -1,0 +1,21 @@
+name: 自动同步内容至 Farbox
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - '**.md'
+      - '**.jade'
+      - '**.json'
+      - '**.css'
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: "2.x"
+      - run: |
+          pip install farbox_bucket
+          python sync_to_server.py
