@@ -9,7 +9,7 @@ private_key = """
 填写你的私钥
 """
 
-root = "./"
+root = "posts"
 
 # 节点
 node = "填写服务器IP"
