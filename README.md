@@ -1,15 +1,19 @@
-## Farbox 2 支持自动同步模板
+## Farbox 2 自动同步模板
 
 ### 初始化配置
 
 点击 [Use this template](https://github.com/huhuhang/farbox-template/generate) 按钮基于本模板仓库创建自己的 **私有仓库**。务必使用私有仓库，否则可能会暴露你的私钥地址。当然，如果你需要公开自己的博客内容，可以借助 Actions secrets 功能保护自己的私钥。
 
-修改主目录下面的 `sync_from_server.py` 和 `sync_to_server.py` 脚本，替换其中的**私钥**和**服务器 IP** 字段。
+然后修改主目录下面的 `sync_from_server.py` 和 `sync_to_server.py` 脚本，替换其中的**私钥**和**服务器 IP** 字段。
 
-### 第一次同步
+### 自动同步
 
-首次使用时，需要从服务器同步内容到仓库中。点击 Actions 面板，选中「 手动同步来自 Farbox 的内容」，然后手动执行。
+提交到 master 分支下方的 `.md`，`.jade` 等相关文件发生变更将触发自动同步。你可以到 `.github/workflows/sync_to_server.yml` 下的 `path` 字段中修改触发同步的文件类型。
+
+### 手动从服务器同步
+
+某些时候，如果你直接在 Farbox 后台管理面板修改了配置项，可能需要手动将配置和内容同步回仓库，避免下一次被仓库自动同步的内容覆盖。
+
+手动同步需要点击 Actions 面板，选中「 手动同步来自 Farbox 的内容」，然后手动执行。
 
 ![](https://cdn.jsdelivr.net/gh/huhuhang/cdn@master/images/2021/04/1617594412728.png)
-
-如果你的私钥和服务器地址配置无误，稍后仓库中将会同步来自服务端的全部数据。
