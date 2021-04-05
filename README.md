@@ -9,11 +9,3 @@
 ### 自动同步
 
 提交到 master 分支下方的 `.md`，`.jade` 等相关文件发生变更将触发自动同步。你可以到 `.github/workflows/sync_to_server.yml` 下的 `path` 字段中修改触发同步的文件类型。
-
-### 手动从服务器同步
-
-某些时候，如果你直接在 Farbox 后台管理面板修改了配置项，可能需要手动将配置和内容同步回仓库，避免下一次被仓库自动同步的内容覆盖。
-
-手动同步需要点击 Actions 面板，选中「 手动同步来自 Farbox 的内容」，然后手动执行。
-
-![](https://cdn.jsdelivr.net/gh/huhuhang/cdn@master/images/2021/04/1617594412728.png)
