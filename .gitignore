@@ -1,1 +1,6 @@
+Pipfile
+_cache
 .DS_Store
+.sync/
+.configs/
+.metion/
