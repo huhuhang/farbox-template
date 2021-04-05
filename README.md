@@ -2,7 +2,7 @@
 
 ### 初始化配置
 
-点击 `Use this template` 按钮基于本模板仓库创建自己的 **私有仓库**。务必使用私有仓库，否则可能会暴露你的私钥地址。当然，如果你需要公开自己的博客内容，可以借助 Actions secrets 功能保护自己的私钥。
+点击 [Use this template](https://github.com/huhuhang/farbox-template/generate) 按钮基于本模板仓库创建自己的 **私有仓库**。务必使用私有仓库，否则可能会暴露你的私钥地址。当然，如果你需要公开自己的博客内容，可以借助 Actions secrets 功能保护自己的私钥。
 
 修改主目录下面的 `sync_from_server.py` 和 `sync_to_server.py` 脚本，替换其中的**私钥**和**服务器 IP** 字段。
 
